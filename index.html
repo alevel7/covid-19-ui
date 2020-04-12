@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="covid-19 or coronavirus estimator">
+    <meta name="keywords" content="covid-19, coronavirus, virus, corona, sars">
+    <meta name="author" content="kazeem taiwo adeyinka">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Covid-19 Estimator</title>
+</head>
+
+<body>
+    <div class="container p-3 my-3 border bg-primary text-white">
+        <h1>COVID-19 ESTIMATOR</h1>
+    </div>
+    <div class="container ">
+        <form action="" method="post" class="">
+            <div class="form-group">
+                <label for="population">Population</label>
+                <input type="number" class="form-control form-control-sm" name="population" id="population"
+                    aria-describedby="popText" placeholder="Enter the Population" [data-population]>
+                <small id="popText" class="form-text text-muted">Represents the total population</small>
+            </div>
+
+            <!--time to elapse-->
+            <div class="form-group">
+                <label for="timeToElapse">Time to Elapse</label>
+                <input type="text" class="form-control" name="timeToElapse" id="timeToElapse"
+                    aria-describedby="timeText" placeholder="Enter the time to elapse" [data-time-to-elapse]>
+                <small id="timeText" class="form-text text-muted">Duration to estimate in Days,Weeks, or Months</small>
+            </div>
+
+            <!--reported cases-->
+            <div class="form-group">
+                <label for="reportedCases">Reported Cases</label>
+                <input type="number" class="form-control form-control-sm" name="reportedCases" id="reportedCases"
+                    aria-describedby="reportedCasesText" placeholder="Enter the Number of Reported Cases" [data-reported-cases]>
+                <small id="reportedCasesText" class="form-text text-muted">Number of Reported cases</small>
+            </div>
+
+            <!--total hospital beds-->
+            <div class="form-group">
+                <label for="totalHospitalBeds">Total Hospital Beds</label>
+                <input type="number" class="form-control form-control-sm" name="totalHospitalBeds"
+                    id="totalHospitalBeds" aria-describedby="totalHospitalBedsText" placeholder="Total Hospital Beds" [data-total-hospital-beds]>
+                <small id="totalHospitalBedsText" class="form-text text-muted">Total Number of Hospital beds</small>
+            </div>
+            <div class="form-group">
+                <label for="periodType">Period Type</label>
+                <select class="form-control form-control-sm" name="periodType" id="periodType" [data-period-type]>
+                    <option value="days">days</option>
+                    <option value="weeks">weeks</option>
+                    <option value="months">months</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" [data-go-estimate]>Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
